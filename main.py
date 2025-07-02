@@ -106,3 +106,9 @@ def delete_book(book_title: str):
             BOOKS.pop(i)
             return {"message": f"'{book_title}' deleted successfully"}
     return {"message": "Book not found"}
+
+
+
+@app.get("/")
+def root():
+    return {"message": "FastAPI app is running on AWS EC2!"}
